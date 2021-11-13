@@ -4,11 +4,11 @@
 
 ## SSH
 - Generate key
-  ```shell
+  ```bash
   ssh-keygen -t rsa -C "<email>"
   ```
 - Run SSH Agent
-  ```shell
+  ```bash
   eval "$(ssh-agent -s)"
   ```
 - Add key
