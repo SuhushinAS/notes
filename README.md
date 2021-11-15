@@ -80,8 +80,15 @@
 
 ## Other
 
-- Set watchers limit
-  (https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit)
+- Inotify Watches Limit (https://youtrack.jetbrains.com/articles/IDEA-A-2/Inotify-Watches-Limit)
+  - Add the following line to either `/etc/sysctl.conf` file or a new `*.conf` file (e.g. `idea.conf`) under `/etc/sysctl.d/` directory:
+    ```ini
+    fs.inotify.max_user_watches = 524288
+    ```
+  - Then run this command to apply the change:
+    ```shell
+    sudo sysctl -p --system
+    ```
 - Chmod
   ```shell
   sudo chmod -R <mode> <path>
