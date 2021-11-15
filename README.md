@@ -9,72 +9,72 @@
 ## Docker
 
 - Stop all containers
-  ```bash
+  ```shell
   docker rm -f $(docker ps -aq)
   ```
 - Enter into a container
-  ```bash
+  ```shell
   docker exec <container> sh
   ```
 
 ## GIT
 
 - Ignore file mode
-  ```bash
+  ```shell
   git config core.fileMode false
   ```
 - Clean origin
-  ```bash
+  ```shell
   git fetch -p
   ```
 - Show repository address
-  ```bash
+  ```shell
   git remote show origin
   ```
 - Revert changes
-  ```bash
+  ```shell
   git checkout <commit> -- <file>
   ```
 - Graph log
-  ```bash
+  ```shell
   git log --graph --all
   ```
 - "Undo"
-  ```bash
+  ```shell
   git reset --hard ORIG_HEAD
   ```
 - Rebase commits From `current` to `target`
-  ```bash
+  ```shell
   git rebase <target>
   ```
 - Squash commits from `current-commit` to `target-commit`
-  ```bash
+  ```shell
   git rebase -i <pre_target-commit>
   ```
 
 ## SSH
 
 - Generate key
-  ```bash
+  ```shell
   ssh-keygen -t rsa -C "<email>"
   ```
 - Run SSH Agent
-  ```bash
+  ```shell
   eval "$(ssh-agent -s)"
   ```
 - Add key
-  ```bash
+  ```shell
   ssh-add ~/.ssh/id_rsa
   ```
 - Check connection
-  ```bash
+  ```shell
   ssh -T git@<server>
   ```
 
 ## VirtualBox
 
 - MacOS set resolution
-  ```bash
+  ```shell
   VBoxManage setextradata "<name>" VBoxInternal2/EfiGraphicsResolution <resolution-x>x<resolution-y>
   ```
 
@@ -83,23 +83,23 @@
 - Set watchers limit
   (https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit)
 - Chmod
-  ```bash
+  ```shell
   sudo chmod -R <mode> <path>
   ```
 - Find & Kill Process
   - Find Process
-    ```bash
+    ```shell
     ps ax |grep <search>
     ```
   - Check ports
-    ```bash
+    ```shell
     netstat -natp
     ```
   - Kill Process by `Id`
-    ```bash
+    ```shell
     sudo kill -9 <Id>
     ```
 - Replace all extensions
-  ```bash
+  ```shell
   find . -name "*.<from>" -exec rename -v 's/\.<from>$/\.<to>/i' {} \;
   ```
