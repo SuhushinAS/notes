@@ -32,49 +32,49 @@
   git remote show origin
   ```
 - Revert changes
-  ```shell
+  ```bash
   git checkout <commit> -- <file>
   ```
 - Graph log
-  ```shell
+  ```bash
   git log --graph --all
   ```
 - "Undo"
-  ```shell
+  ```bash
   git reset --hard ORIG_HEAD
   ```
 - Rebase commits From `current` to `target`
-  ```shell
+  ```bash
   git rebase <target>
   ```
 - Squash commits from `current-commit` to `target-commit`
-  ```shell
+  ```bash
   git rebase -i <pre_target-commit>
   ```
 
 ## SSH
 
 - Generate key
-  ```shell
+  ```bash
   ssh-keygen -t rsa -C "<email>"
   ```
 - Run SSH Agent
-  ```shell
+  ```bash
   eval "$(ssh-agent -s)"
   ```
 - Add key
-  ```shell
+  ```bash
   ssh-add ~/.ssh/id_rsa
   ```
 - Check connection
-  ```shell
+  ```bash
   ssh -T git@<server>
   ```
 
 ## VirtualBox
 
 - MacOS set resolution
-  ```shell
+  ```bash
   VBoxManage setextradata "<name>" VBoxInternal2/EfiGraphicsResolution <resolution-x>x<resolution-y>
   ```
 
@@ -83,23 +83,23 @@
 - Set watchers limit
   (https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit)
 - Chmod
-  ```shell
+  ```bash
   sudo chmod -R <mode> <path>
   ```
 - Find & Kill Process
   - Find Process
-    ```shell
+    ```bash
     ps ax |grep <search>
     ```
   - Check ports
-    ```shell
+    ```bash
     netstat -natp
     ```
   - Kill Process by `Id`
-    ```shell
+    ```bash
     sudo kill -9 <Id>
     ```
 - Replace all extensions
-  ```shell
+  ```bash
   find . -name "*.<from>" -exec rename -v 's/\.<from>$/\.<to>/i' {} \;
   ```
