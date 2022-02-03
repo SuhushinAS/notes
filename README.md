@@ -2,6 +2,7 @@
 
 - [Docker](#docker)
 - [GIT](#git)
+- [NPM](#npm)
 - [SSH](#ssh)
 - [VirtualBox](#virtualbox)
 - [Other](#other)
@@ -50,6 +51,12 @@
 - Squash commits from `current-commit` to `target-commit`
   ```shell
   git rebase -i <pre_target-commit>
+  ```
+
+## NPM
+- Show active npm links
+  ```shell
+  npm ls -g --depth=0 --link=true
   ```
 
 ## SSH
