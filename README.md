@@ -80,6 +80,10 @@
 
 ## VirtualBox
 
+- Enable "Nested VT-x/AMD-V"
+  ```shell
+  VBoxManage modifyvm "<name>" --nested-hw-virt on
+  ```
 - MacOS set resolution
   ```shell
   VBoxManage setextradata "<name>" VBoxInternal2/EfiGraphicsResolution <resolution-x>x<resolution-y>
