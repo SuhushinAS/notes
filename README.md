@@ -5,6 +5,7 @@
 - [NPM](#npm)
 - [SSH](#ssh)
 - [VirtualBox](#virtualbox)
+- [Windows](#windows)
 - [Other](#other)
 
 ## Docker
@@ -87,6 +88,16 @@
 - MacOS set resolution
   ```shell
   VBoxManage setextradata "<name>" VBoxInternal2/EfiGraphicsResolution <resolution-x>x<resolution-y>
+
+## Windows
+
+- Проверка всех приложений и их полные имена.
+  ```shell
+  Get-AppxPackage | Select Name, PackageFullName
+  ```
+- Удаление приложения по названию
+  ```shell
+  Get-AppxPackage -allusers <название> | Remove-AppxPackage
   ```
 
 ## Other
